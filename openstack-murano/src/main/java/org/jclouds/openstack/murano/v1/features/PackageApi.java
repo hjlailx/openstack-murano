@@ -153,6 +153,7 @@ public interface PackageApi {
 	@Named("categories:list")
 	@GET
 //	@SelectJson("categories")
+	@Path("/categories")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Fallback(NullOnNotFoundOr404.class)
 	Category getCategories();
