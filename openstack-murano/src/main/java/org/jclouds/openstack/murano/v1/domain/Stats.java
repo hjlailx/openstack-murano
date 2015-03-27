@@ -33,7 +33,7 @@ public class Stats {
 	private final Integer errorsCount;
 	private final Float requestsPerSecond ;
 	private final Integer requestsCount ;
-	private final Integer cpuPercent ;
+	private final Double cpuPercent ;
 	private final Integer cpuCount ;
 	private final String host ;
 	private final Float averageResponseTime ;
@@ -42,7 +42,7 @@ public class Stats {
 	@ConstructorProperties({ "requests_per_tenant", "errors_per_second","errors_count", "requests_per_second", "requests_count", "cpu_percent"
 		,"cpu_count", "host", "average_response_time"})
 	protected Stats(String requestsPerTenant, Integer errorsPerSecond, Integer errorsCount, Float requestsPerSecond, Integer requestsCount
-			, Integer cpuPercent, Integer cpuCount, String host, Float averageResponseTime) {
+			, Double cpuPercent, Integer cpuCount, String host, Float averageResponseTime) {
 		this.requestsPerTenant = requestsPerTenant;
 		this.errorsPerSecond = errorsPerSecond ;
 		this.errorsCount = errorsCount;
@@ -74,7 +74,7 @@ public class Stats {
 		return requestsCount;
 	}
 
-	public Integer getCpuPercent() {
+	public Double getCpuPercent() {
 		return cpuPercent;
 	}
 
@@ -142,7 +142,7 @@ public class Stats {
 		protected Integer errorsCount;
 		protected Float requestsPerSecond ;
 		protected Integer requestsCount ;
-		protected Integer cpuPercent ;
+		protected Double cpuPercent ;
 		protected Integer cpuCount ;
 		protected String host ;
 		protected Float averageResponseTime ;
@@ -172,7 +172,7 @@ public class Stats {
 			return self();
 		}
 		
-		public Builder cpuPercent(Integer cpuPercent) {
+		public Builder cpuPercent(Double cpuPercent) {
 			this.cpuPercent = cpuPercent;
 			return self();
 		}
